@@ -1,0 +1,104 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    height: 100vh;
+    font-family: "Calibri Light";
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+table
+{
+    margin: 20px;
+    height: 20%;
+}
+
+table form
+{
+    display: flex;
+    width: unset;
+}
+
+table input
+{
+    padding: unset;
+    border-top: white 2px solid;
+    cursor: pointer;
+}
+
+a
+{
+    color: #7c9ab7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p
+{
+    margin: 10px 0;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.profile
+{
+    align-items: normal;
+    justify-content: normal;
+    padding: 1%;
+}
+
+div body
+{
+    margin: 100px 0;
+    padding: 50px;
+}
+
+input
+{
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+}
+
+select
+{
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+}
+
+button
+{
+    padding: 10px;
+    background: #e3e3e3;
+    cursor: pointer;
+    border: unset;
+}
+
+.msg
+{
+    background: rgba(229, 146, 42, 0.85);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.logout
+{
+    color: #ee1b27;
+}
