@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect('localhost', 'root', '', 'Lab3');
+    $connect = mysqli_connect('localhost', 'root', '', 'FindMyTeamDB');
 
     if(!$connect)
     {
