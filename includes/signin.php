@@ -21,7 +21,7 @@
             "role" => $user['role']
         ];
 
-        header('Location: ../index.php');
+        header('Location: ../mainpage.php');
     }
     else
     {
