@@ -6,13 +6,13 @@
         <nav>
             <div class="menu-wrapper">
                 <ul class="left-menu">
-                    <li><a href="#">Головна</a></li>
-                    <li><a href="#">Про нас</a></li>
-                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Р“РѕР»РѕРІРЅР°</a></li>
+                    <li><a href="#">РџСЂРѕ РЅР°СЃ</a></li>
+                    <li><a href="#">РљРѕРЅС‚Р°РєС‚Рё</a></li>
                 </ul>
                 <ul class="right-menu">
-                    <li class="auth-button"><a href="#">Увійти</a></li>
-                    <li class="auth-button"><a href="#">Зареєструватися</a></li>
+                    <li class="auth-button"><a href="#">РЈРІС–Р№С‚Рё</a></li>
+                    <li class="auth-button"><a href="#">Р—Р°СЂРµС”СЃС‚СЂСѓРІР°С‚РёСЃСЏ</a></li>
                 </ul>
             </div>
         </nav>

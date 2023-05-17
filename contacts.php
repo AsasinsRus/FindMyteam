@@ -1,32 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>О нас - Пошук товариша для гри в онлайн-ігри</title>
+    <title>Рћ РЅР°СЃ - РџРѕС€СѓРє С‚РѕРІР°СЂРёС€Р° РґР»СЏ РіСЂРё РІ РѕРЅР»Р°Р№РЅ-С–РіСЂРё</title>
     <link rel="stylesheet" href="mainpage.css">
 </head>
 <body>
-    <header>
-        <div class="header-title">
-            <h1>FindMyTeam</h1>
-        </div>
-        <nav>
-            <div class="menu-wrapper">
-                <ul class="left-menu">
-                    <li><a href="#">Головна</a></li>
-                    <li><a href="#">Про нас</a></li>
-                    <li><a href="#">Контакти</a></li>
-                </ul>
-                <ul class="right-menu">
-                    <li class="auth-button"><a href="#">Увійти</a></li>
-                    <li class="auth-button"><a href="#">Зареєструватися</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+
+<?php require_once 'includes/header.php' ?>
 
     <section id="about">
         <div class="about-content">
-            <h2>О нас</h2>
+            <h2>РџСЂРѕ РЅР°СЃ</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit tristique risus ut auctor. Morbi lacinia ullamcorper augue, eu commodo dui faucibus in. Fusce rutrum sem sit amet nisl sollicitudin scelerisque. Nullam bibendum mi id justo posuere ullamcorper. Aenean id velit nec sapien semper malesuada. Pellentesque sollicitudin tortor non nibh tempor, non accumsan elit ultricies. Ut congue pretium erat, vitae feugiat felis vulputate ut. In rhoncus sagittis tellus. Proin pellentesque tristique quam, vitae laoreet orci fermentum a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Curabitur eu ipsum sit amet purus elementum gravida nec a elit. Phasellus vehicula ipsum at lorem vulputate, in facilisis dui faucibus. Suspendisse potenti. Nunc ultrices, justo ut finibus tempus, est dui aliquam lectus, et faucibus sapien est id risus.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit tristique risus ut auctor. Morbi lacinia ullamcorper augue, eu commodo dui faucibus in. Fusce rutrum sem sit amet nisl sollicitudin scelerisque. Nullam bibendum mi id justo posuere ullamcorper. Aenean id velit nec sapien semper malesuada. Pellentesque sollicitudin tortor non nibh tempor, non accumsan elit ultricies. Ut congue pretium erat, vitae feugiat felis vul</p>
         </div>
@@ -34,7 +18,7 @@
 
     <section id="purpose">
         <div class="purpose-content">
-            <h2>Для чого потрібен наш сайт</h2>
+            <h2>Р”Р»СЏ С‡РѕРіРѕ РїРѕС‚СЂС–Р±РµРЅ РЅР°С€ СЃР°Р№С‚</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit tristique risus ut auctor. Morbi lacinia ullamcorper augue, eu commodo dui faucibus in. Fusce rutrum sem sit amet nisl sollicitudin scelerisque. Nullam bibendum mi id justo posuere ullamcorper. Aenean id velit nec sapien semper malesuada. Pellentesque sollicitudin tortor non nibh tempor, non accumsan elit ultricies. Ut congue pretium erat, vitae feugiat felis vulputate ut. In rhoncus sagittis tellus. Proin pellentesque tristique quam, vitae laoreet orci fermentum a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Curabitur eu ipsum sit amet purus elementum gravida nec a elit. Phasellus vehicula ipsum at lorem vulputate, in facilisis dui faucibus. Suspendisse potenti. Nunc ultrices, justo ut finibus tempus, est dui aliquam lectus, et faucibus sapien est id risus.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit tristique risus ut auctor. Morbi lacinia ullamcorper augue, eu commodo dui faucibus in. Fusce rutrum sem sit amet nisl sollicitudin scelerisque. Nullam bibendum mi id justo posuere ullamcorper. Aenean id velit nec sapien semper malesuada. Pellentesque sollicitudin tortor non nibh tempor, non accumsan elit ultricies. Ut congue pretium erat, vitae feugiat felis vulputate ut.</p>
         </div>
@@ -42,50 +26,49 @@
 
     <section id="team">
         <div class="team-content">
-            <h2>Наша команда</h2>
+            <h2>РќР°С€Р° РєРѕРјР°РЅРґР°</h2>
             <div class="team-members">
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="team_member1.jpg" alt="Фотографія учасника команди 1">
+                        <img src="team_member1.jpg" alt="Р¤РѕС‚РѕРіСЂР°С„С–СЏ СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё 1">
                     </div>
                     <div class="member-info">
-                        <h3>Ім'я учасника команди 1</h3>
-                        <p>Посада учасника команди 1</p>
+                        <h3>Р†Рј'СЏ СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё</h3>
+                        <p>РџРѕСЃР°РґР° СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="team_member2.jpg" alt="Фотографія учасника команди 2">
+                        <img src="team_member2.jpg" alt="Р¤РѕС‚РѕРіСЂР°С„С–СЏ СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё">
                     </div>
                     <div class="member-info">
-                        <h3>Ім'я учасника команди 2</h3>
-                        <p>Посада учасника команди 2</p>
+                        <h3>Р†Рј'СЏ СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё</h3>
+                        <p>РџРѕСЃР°РґР° СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="team_member3.jpg" alt="Фотографія учасника команди 3">
+                        <img src="team_member3.jpg" alt="Р¤РѕС‚РѕРіСЂР°С„С–СЏ СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё">
                     </div>
                     <div class="member-info">
-                        <h3>Ім'я учасника команди 3</h3>
-                        <p>Посада учасника команди 3</p>
+                        <h3>Р†Рј'СЏ СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё</h3>
+                        <p>РџРѕСЃР°РґР° СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="team_member4.jpg" alt="Фотографія учасника команди 4">
+                        <img src="team_member4.jpg" alt="Р¤РѕС‚РѕРіСЂР°С„С–СЏ СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё">
                     </div>
                     <div class="member-info">
-                        <h3>Ім'я учасника команди 4</h3>
-                        <p>Посада учасника команди 4</p>
+                        <h3>Р†Рј'СЏ СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё</h3>
+                        <p>РџРѕСЃР°РґР° СѓС‡Р°СЃРЅРёРєР° РєРѕРјР°РЅРґРё</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2023 Пошук товариша для гри в онлайн-ігри. Усі права захищені.</p>
-    </footer>
+<?php require_once 'includes/footer.php' ?>
+
 </body>
 </html>
