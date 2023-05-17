@@ -59,7 +59,7 @@ input[type="file"] {
 }
 
 textarea {
-    resize: none;
+    resize: vertical;
 }
 
 .save-button {
@@ -73,6 +73,20 @@ textarea {
 }
 
 .save-button:hover {
+    background-color: #6b6b6b;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3d3e44;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.back-button:hover {
     background-color: #6b6b6b;
 }
 
