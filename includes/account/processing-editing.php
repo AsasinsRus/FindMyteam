@@ -47,15 +47,21 @@ if($user['about_me'] != $new_data['about_me'] && strlen($new_data['about_me']) >
 if($_FILES['avatar']['name'] != '')
 {
     $path = 'assets/pics/upload_pics/' . time() . $_FILES['avatar']['name'];
+
+    if($_SESSION['user']['avatar'] != '')
+    {
+        unlink('./../../' . $_SESSION['user']['avatar']);
+    }
+
     if(!move_uploaded_file($_FILES['avatar']['tmp_name'], './../../' . $path))
     {
         $_SESSION['message'] .= "Помилка завантаження файлу\n";
         header('Location: edit-account.php?id=', $_SESSION['user']['id']);
+        return;
     }
 
     mysqli_query($connect, "UPDATE `users` SET `avatar` = '$path' WHERE `id` = '$id'");
     $_SESSION['user']['avatar'] = $path;
-    return;
 }
 
 if($user['login'] != $new_login)
