@@ -72,12 +72,26 @@ if($user['about_me'] != $new_about_me)
 
 if($contacts['steam'] != $new_steam)
 {
-    mysqli_query($connect, "UPDATE `contacts` SET `steam` = '$new_steam' WHERE `user_id` = '$id'");
+    if(mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `contacts` WHERE `user_id` = '$id'")) == 0)
+    {
+        mysqli_query($connect, "INSERT INTO `contacts` (`user_id`, `steam`) VALUES ('$id', '$new_steam')");
+    }
+    else
+    {
+        mysqli_query($connect, "UPDATE `contacts` SET `steam` = '$new_steam' WHERE `user_id` = '$id'");
+    }
 }
 
 if($contacts['discord'] != $new_discord)
 {
-    mysqli_query($connect, "UPDATE `contacts` SET `discord` = '$new_discord' WHERE `user_id` = '$id'");
+    if(mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `contacts` WHERE `user_id` = '$id'")) == 0)
+    {
+        mysqli_query($connect, "INSERT INTO `contacts` (`user_id`, `discord`) VALUES ('$id', '$new_discord')");
+    }
+    else
+    {
+        mysqli_query($connect, "UPDATE `contacts` SET `discord` = '$new_discord' WHERE `user_id` = '$id'");
+    }
 }
 
 header('Location: ./../../account.php');

@@ -114,3 +114,8 @@ textarea {
     font-weight: bold;
     color: white;
 }
+
+.buttons
+{
+    margin-bottom: 30px;
+}

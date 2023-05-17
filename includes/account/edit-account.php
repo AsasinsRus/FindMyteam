@@ -58,11 +58,11 @@ $contacts = mysqli_fetch_assoc($contacts);
                 </div>
                 <div class="form-group">
                     <label for="steam">Steam</label>
-                    <input type="text" id="steam" name="steam" placeholder="Введіть посилання на ваш аккаунт" value="<?=$contacts['steam']?>">
+                    <input type="text" id="steam" name="steam" placeholder="Введіть id вашого аккаунту" value="<?=$contacts['steam']?>">
                 </div>
                 <div class="form-group">
                     <label for="discord">Discord</label>
-                    <input type="text" id="discord" name="discord" placeholder="Введіть посилання на ваш аккаунт" value="<?=$contacts['discord']?>">
+                    <input type="text" id="discord" name="discord" placeholder="Введіть id вашого аккаунту та хештег" value="<?=$contacts['discord']?>">
                 </div>
                 <div class="form-group">
                     <label for="avatar">Зображення профіля</label>
@@ -75,7 +75,6 @@ $contacts = mysqli_fetch_assoc($contacts);
             </form>
         </div>
     </div>
-
 </div>
 <?php require_once './../../includes/footer.php' ?>
 </body>

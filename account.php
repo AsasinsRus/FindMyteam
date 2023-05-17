@@ -1,10 +1,14 @@
 <?php
 session_start();
+require_once 'includes/connect.php';
 
 if(!$_SESSION['user'])
 {
     header('Location: auth.php');
 }
+$id = $_SESSION['user']['id'];
+$contacts = mysqli_query($connect, "SELECT * FROM `contacts` WHERE `user_id` = '$id'");
+$contacts = mysqli_fetch_assoc($contacts);
 ?>
 
 <!DOCTYPE html>
@@ -28,9 +32,16 @@ if(!$_SESSION['user'])
             <div class="user-info">
                 <h1 class="username"><?= $_SESSION['user']['login']?></h1>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <?php
+                        if($contacts['steam'] != '')
+                        {
+                            echo '<a href="'. 'https://steamcommunity.com/id/' . $contacts['steam'] .'"><img src="assets/pics/icons/steam.png" height="25" width="25"></a>';
+                        }
+                        if($contacts['discord'] != '')
+                        {
+                            echo '<a href="'. 'https://discordapp.com/users/' . $contacts['discord'] .'"><img src="assets/pics/icons/discord.png" height="25" width="25"></a>';
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -41,7 +52,7 @@ if(!$_SESSION['user'])
                 {
                     echo '<p>' . $_SESSION['user']['about_me'] . '</p>';
                 }
-                else echo '<p>На жаль тут нічного не має</p>'?>
+                else echo '<p>На жаль тут нічного не має<br><br>Додайте щось про себе, щоб інші гравці краще Вас розуміли</p>'?>
             </div>
         <div class="game-list">
             <h2>Мої ігри</h2>
@@ -56,7 +67,7 @@ if(!$_SESSION['user'])
     </div>
         <a class="edit-button" href="./includes/account/edit-account.php?id=<?=$_SESSION['user']['id']?>">Змінити профіль</a>
         <a class="edit-button" href="#">Додати гру</a>
-
+</div>
 </div>
 <?php require_once './includes/footer.php' ?>
 </body>
