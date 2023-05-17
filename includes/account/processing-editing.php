@@ -46,7 +46,7 @@ if($user['about_me'] != $new_data['about_me'] && strlen($new_data['about_me']) >
 
 if($_FILES['avatar']['name'] != '')
 {
-    $path = 'assets/pics/upload_pics/' . time() . $_FILES['avatar']['name'];
+    $path = 'assets/pics/upload_avatars/' . time() . $_FILES['avatar']['name'];
 
     if($_SESSION['user']['avatar'] != '')
     {
