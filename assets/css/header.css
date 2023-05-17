@@ -43,19 +43,19 @@ header nav {
     margin-left: 20px;
 }
 
-    .left-menu li, .right-menu li {
-        margin-right: 10px;
-    }
+.left-menu li, .right-menu li {
+    margin-right: 10px;
+}
 
-        .left-menu li a, .right-menu li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.left-menu li a, .right-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-            .left-menu li a:hover, .right-menu li a:hover {
-                text-decoration: underline;
-            }
+.left-menu li a:hover, .right-menu li a:hover {
+    text-decoration: underline;
+}
 
 .auth-button {
     display: inline;
@@ -63,17 +63,17 @@ header nav {
     position: relative;
 }
 
-    .auth-button:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: -5px;
-        transform: translateY(-50%);
-        width: 1px;
-        height: 20px;
-        background-color: #fff;
-    }
+.auth-button:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: #fff;
+}
 
-    .auth-button:last-child:after {
-        display: none;
-    }
+.auth-button:last-child:after {
+    display: none;
+}
