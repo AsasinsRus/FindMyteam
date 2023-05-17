@@ -16,8 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Авторизація</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
+    </head>
 <body class="profile">
     <div>
         <h2><?= $_SESSION['user']['full_name'] ?></h2>
