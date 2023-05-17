@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="UTF-8">
     <title>Пошук товариша для гри в онлайн-ігри</title>
     <link rel="stylesheet" href="assets/css/mainpage.css">
 </head>
