@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>Пошук товариша для гри в онлайн-ігри</title>
     <link rel="stylesheet" href="assets/css/mainpage.css">
 </head>
-<body>
+<body>asdfsaf
 
     <?php require_once 'includes/header.php' ?>
-
+a
     <section id="hero">
         <div class="hero-content">
             <h2>Знайди свого товариша для онлайн-ігор</h2>

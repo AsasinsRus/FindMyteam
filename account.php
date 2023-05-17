@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(!$_SESSION['user'])
+{
+    header('Location: auth.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +19,7 @@
 <div class="profile">
     <div class="profile-header">
         <img class="avatar" src="assets/pics/avatar.png" alt="Avatar">
-        <h1 class="username">Username</h1>
+        <h1 class="username"><?php $_SESSION['user']['login'] ?>></h1>
     </div>
     <div class="profile-body">
         <div class="profile-info">
