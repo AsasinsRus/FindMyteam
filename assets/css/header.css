@@ -7,10 +7,18 @@ header {
     padding: 5px 10px;
 }
 
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Максимальная ширина */
+    width: 100%;
+}
+
 .header-title {
     background-color: #fff;
     color: #333;
-    padding: 0px 20px;
+    padding: 0 20px;
     border-radius: 10px;
     display: inline-block;
 }
