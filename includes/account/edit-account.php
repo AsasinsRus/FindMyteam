@@ -1,10 +1,19 @@
 <?php
 session_start();
+require_once '../connect.php';
 
 if(!$_SESSION['user'])
 {
     header('Location: auth.php');
 }
+
+$id = $_GET['id'];
+$user = mysqli_query($connect, "SELECT * FROM `users` WHERE `id` = '$id'");
+$contacts = mysqli_query($connect, "SELECT * FROM `contacts` WHERE `user_id` = '$id'");
+
+$user = mysqli_fetch_assoc($user);
+$contacts = mysqli_fetch_assoc($contacts);
+
 ?>
 
 <!DOCTYPE html>
@@ -26,28 +35,29 @@ if(!$_SESSION['user'])
     </div>
     <div class="profile-body">
         <div class="profile-info">
-            <form>
+            <form action="processing-editing.php?id=<?=$_SESSION['user']['id']?>" method="post">
                 <div class="form-group">
                     <label for="username">Логін</label>
-                    <input type="text" id="username" name="username" placeholder="Введіть логін">
+                    <input type="text" id="username" name="username" placeholder="Введіть логін" value="<?=$user['login']?>">
                 </div>
                 <div class="form-group">
                     <label for="bio">Bio</label>
-                    <textarea id="bio" name="Про мене" placeholder="Введіть інформацію про себе"></textarea>
+                    <textarea id="bio" name="Про мене" placeholder="Введіть інформацію про себе"><?=$user['about_me']?></textarea>
                 </div>
                 <div class="form-group">
                     <label for="steam">Steam</label>
-                    <input type="text" id="steam" name="steam" placeholder="Введіть посилання на ваш аккаунт">
+                    <input type="text" id="steam" name="steam" placeholder="Введіть посилання на ваш аккаунт" value="<?=$contacts['steam']?>">
                 </div>
                 <div class="form-group">
                     <label for="discord">Discord</label>
-                    <input type="text" id="discord" name="discord" placeholder="Введіть посилання на ваш аккаунт">
+                    <input type="text" id="discord" name="discord" placeholder="Введіть посилання на ваш аккаунт" value="<?=$contacts['discord']?>">
                 </div>
                 <div class="form-group">
                     <label for="avatar">Зображення профіля</label>
                     <input type="file" id="avatar" name="avatar">
                 </div>
                 <button class="save-button" type="submit">Зберегти зміни</button>
+                <a class="back-button" href="./../../account.php">Назад</a>
             </form>
         </div>
     </div>

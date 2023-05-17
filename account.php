@@ -19,7 +19,7 @@ if(!$_SESSION['user'])
 <div class="profile">
     <div class="profile">
         <div class="profile-header">
-            <img class="avatar" src="assets/pics/avatar.png" alt="Avatar">
+            <img class="avatar" src="<?php if($_SESSION['user']['avatar'] != "") {$_SESSION['user']['avatar'];} else ?>./../../assets/pics/avatar.png" alt="Avatar">
             <div class="user-info">
                 <h1 class="username"><?= $_SESSION['user']['login']?></h1>
                 <div class="social-icons">
@@ -48,7 +48,7 @@ if(!$_SESSION['user'])
 
         </div>
     </div>
-        <a class="edit-button" href="#">Змінити профіль</a>
+        <a class="edit-button" href="./includes/account/edit-account.php?id=<?=$_SESSION['user']['id']?>">Змінити профіль</a>
         <a class="edit-button" href="#">Додати гру</a>
     <div class="profile-footer">
         <p>&copy; 2023 FindMyTeam. All rights reserved.</p>

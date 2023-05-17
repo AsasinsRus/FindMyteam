@@ -3,7 +3,7 @@
 
     if(!$_SESSION['user'])
     {
-        header('Location: auth.php');
+        header('Location: mainpage.php');
     }
 ?>
 
