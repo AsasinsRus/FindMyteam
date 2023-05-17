@@ -21,18 +21,30 @@ $contacts = mysqli_fetch_assoc($contacts);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile - Steam Profile</title>
+    <title>Оновлення профіля</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-tjZu7N3B+uDlPJjEu9M9CeeezWzFKNUD7GBQDy/hoyXJjUDHD84xXjLvnjfaRlU8ovHjQHLLaqHzZl3ohy+0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./../../assets/css/account/edit-account.css">
 </head>
 <body>
+<?php require_once './../../includes/header.php' ?>
 <div class="profile">
     <div class="profile-header">
-        <img class="avatar" src="<?php if($_SESSION['user']['avatar'] != "") {$_SESSION['user']['avatar'];} else ?>./../../assets/pics/avatar.png" alt="Avatar">
+        <img class="avatar" src="<?php
+        if($_SESSION['user']['avatar'] != "")
+        {
+            echo './../../' . $_SESSION['user']['avatar'];
+        } else echo './../../assets/pics/avatar.png'?>" alt="Avatar">
         <div class="user-info">
             <h1 class="username">Оновлення профіля</h1>
         </div>
     </div>
+    <?php
+        if($_SESSION['message'])
+        {
+            echo '<p class="msg">'.$_SESSION['message'].'</p>';
+            unset($_SESSION['message']);
+        }
+    ?>
     <div class="profile-body">
         <div class="profile-info">
             <form action="processing-editing.php?id=<?=$_SESSION['user']['id']?>" method="post" enctype="multipart/form-data">
@@ -63,9 +75,8 @@ $contacts = mysqli_fetch_assoc($contacts);
             </form>
         </div>
     </div>
-    <div class="profile-footer">
-        <p>&copy; 2023 FindMyTeam Profile. All rights reserved.</p>
-    </div>
+
 </div>
+<?php require_once './../../includes/footer.php' ?>
 </body>
 </html>

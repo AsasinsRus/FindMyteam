@@ -15,8 +15,14 @@ session_start();
                     <li><a href="/aboutus.php">Про нас</a></li>
                 </ul>
                 <ul class="right-menu">
-                    <li class="auth-button"><?php if($_SESSION['user']) {?><a href="/account.php.php">Профіль</a></li><?php } else?> <a href="/auth.php">Увійти</a></li>
-                    <li class="auth-button"><?php if($_SESSION['user']) {?><a href="/includes/logout.php">Вихід</a></li><?php } else?> <a href="/register.php">Зареєструватися</a></li>
+                    <li class="auth-button"><?php if($_SESSION['user'])
+                    {
+                        echo '<a href="/account.php">Профіль</a></li>';
+                    } else echo '<a href="/auth.php">Увійти</a></li>'; ?>
+                    <li class="auth-button"><?php if($_SESSION['user'])
+                    {
+                        echo '<a href="/includes/logout.php">Вихід</a></li>';
+                    } else echo '<a href="/register.php">Зареєструватися</a></li>'; ?>
                 </ul>
             </div>
         </nav>

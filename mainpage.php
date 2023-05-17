@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Пошук товариша для гри в онлайн-ігри</title>
-    <link rel="stylesheet" href="assets/css/mainpage.css">
+    <link rel="stylesheet" href="/assets/css/mainpage.css">
 </head>
 <body>
 

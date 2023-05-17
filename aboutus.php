@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>О нас - Пошук товариша для гри в онлайн-ігри</title>
-    <link rel="stylesheet" href="assets/css/aboutus.css">
+    <link rel="stylesheet" href="./assets/css/aboutus.css">
 </head>
 <body>
 

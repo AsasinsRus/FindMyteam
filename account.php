@@ -12,14 +12,19 @@ if(!$_SESSION['user'])
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steam Profile</title>
+    <title>Профіль</title>
     <link rel="stylesheet" href="assets/css/account/account.css">
 </head>
 <body>
+<?php require_once './includes/header.php' ?>
 <div class="profile">
     <div class="profile">
         <div class="profile-header">
-            <img class="avatar" src="<?php if($_SESSION['user']['avatar'] != "") {$_SESSION['user']['avatar'];} else ?>./../../assets/pics/avatar.png" alt="Avatar">
+            <img class="avatar" src="<?php
+                if($_SESSION['user']['avatar'] != "")
+                {
+                    echo $_SESSION['user']['avatar'];
+                } else echo './../../assets/pics/avatar.png'?>" alt="Avatar">
             <div class="user-info">
                 <h1 class="username"><?= $_SESSION['user']['login']?></h1>
                 <div class="social-icons">
@@ -32,10 +37,11 @@ if(!$_SESSION['user'])
         <div class="profile-body">
             <div class="profile-info">
                 <h2>Про мене</h2>
-                <?php if($_SESSION['user']['about_me'] != ""){?>
-                    <p><?= $_SESSION['user']['about_me']?></p>
-                <?php }else ?> <p> На жаль тут нічного не має</p>
-
+                <?php if($_SESSION['user']['about_me'] != "")
+                {
+                    echo '<p>' . $_SESSION['user']['about_me'] . '</p>';
+                }
+                else echo '<p>На жаль тут нічного не має</p>'?>
             </div>
         <div class="game-list">
             <h2>Мої ігри</h2>
@@ -50,9 +56,8 @@ if(!$_SESSION['user'])
     </div>
         <a class="edit-button" href="./includes/account/edit-account.php?id=<?=$_SESSION['user']['id']?>">Змінити профіль</a>
         <a class="edit-button" href="#">Додати гру</a>
-    <div class="profile-footer">
-        <p>&copy; 2023 FindMyTeam. All rights reserved.</p>
-    </div>
+
 </div>
+<?php require_once './includes/footer.php' ?>
 </body>
 </html>

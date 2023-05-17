@@ -18,29 +18,33 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <form action="includes/signup.php" method="post">
-
-        <?php
+    <?php require_once 'includes/header.php' ?>
+    <div class="form">
+        <form action="/includes/signup.php" method="post">
+            <?php
             if($_SESSION['message'])
             {
                 echo "<p class='msg'>" . $_SESSION['message'] . "</p>";
             }
             unset($_SESSION['message']);
-        ?>
-        <label>Логін</label>
-        <input type="text" placeholder="Введіть свій логін" name="login">
-        <label>ПІБ</label>
-        <input type="text" placeholder="Введіть своє повне ім'я" name="full_name">
-        <label>E-mail</label>
-        <input type="text" placeholder="Введіть адресу електронної пошти" name="email">
-        <label>Пароль</label>
-        <input type="password" placeholder="Введіть пароль" name="password">
-        <label>Підтвердження паролю</label>
-        <input type="password" placeholder="Введіть пароль ще раз" name="password_confirm">
-        <button type="submit">Зареєструватись</button>
-        <p>
-            Вже є аккаунта? - <a href="auth.php">увійти</a>
-        </p>
-    </form>
+            ?>
+            <label>Логін</label>
+            <input type="text" placeholder="Введіть свій логін" name="login">
+            <label>ПІБ</label>
+            <input type="text" placeholder="Введіть своє повне ім'я" name="full_name">
+            <label>E-mail</label>
+            <input type="text" placeholder="Введіть адресу електронної пошти" name="email">
+            <label>Пароль</label>
+            <input type="password" placeholder="Введіть пароль" name="password">
+            <label>Підтвердження паролю</label>
+            <input type="password" placeholder="Введіть пароль ще раз" name="password_confirm">
+            <button type="submit">Зареєструватись</button>
+            <p>
+                Вже є аккаунта? - <a href="auth.php">увійти</a>
+            </p>
+        </form>
+    </div>
+
+    <?php require_once 'includes/footer.php' ?>
 </body>
 </html>
