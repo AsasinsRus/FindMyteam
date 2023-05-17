@@ -35,14 +35,14 @@ $contacts = mysqli_fetch_assoc($contacts);
     </div>
     <div class="profile-body">
         <div class="profile-info">
-            <form action="processing-editing.php?id=<?=$_SESSION['user']['id']?>" method="post">
+            <form action="processing-editing.php?id=<?=$_SESSION['user']['id']?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="username">Логін</label>
-                    <input type="text" id="username" name="username" placeholder="Введіть логін" value="<?=$user['login']?>">
+                    <input type="text" id="login" name="login" placeholder="Введіть логін" value="<?=$user['login']?>">
                 </div>
                 <div class="form-group">
-                    <label for="bio">Bio</label>
-                    <textarea id="bio" name="Про мене" placeholder="Введіть інформацію про себе"><?=$user['about_me']?></textarea>
+                    <label for="bio">BIO (не більше 500 символів)</label>
+                    <textarea id="about_me" name="about_me" placeholder="Введіть інформацію про себе"><?=$user['about_me']?></textarea>
                 </div>
                 <div class="form-group">
                     <label for="steam">Steam</label>
@@ -56,8 +56,10 @@ $contacts = mysqli_fetch_assoc($contacts);
                     <label for="avatar">Зображення профіля</label>
                     <input type="file" id="avatar" name="avatar">
                 </div>
-                <button class="save-button" type="submit">Зберегти зміни</button>
-                <a class="back-button" href="./../../account.php">Назад</a>
+                <div class="buttons">
+                    <button class="save-button" type="submit">Зберегти зміни</button>
+                    <a class="back-button" href="./../../account.php">Назад</a>
+                </div>
             </form>
         </div>
     </div>
