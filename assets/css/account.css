@@ -18,13 +18,39 @@
     border-radius: 50%;
 }
 
-.username {
+.user-info {
     margin-left: 20px;
     font-size: 24px;
 }
 
+.username {
+    margin-bottom: 5px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #888;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
+
 .profile-info h2 {
     margin-bottom: 10px;
+}
+
+.edit-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3d3e44;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.edit-button:hover {
+    background-color: #6b6b6b;
 }
 
 .profile-body {
