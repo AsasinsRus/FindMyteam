@@ -17,6 +17,7 @@
             "login" => $user['login'],
             "email" => $user['email'],
             "about_me" => $user['about_me'],
+            "avatar" => $user['avatar'],
             "role" => $user['role']
         ];
 
