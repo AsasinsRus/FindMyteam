@@ -28,7 +28,7 @@ $contacts = mysqli_fetch_assoc($contacts);
                 if($_SESSION['user']['avatar'] != "")
                 {
                     echo $_SESSION['user']['avatar'];
-                } else echo './../../assets/pics/avatar.png'?>" alt="Avatar">
+                } else echo './assets/pics/avatar.png'?>" alt="Avatar">
             <div class="user-info">
                 <h1 class="username"><?= $_SESSION['user']['login']?></h1>
                 <div class="social-icons">
