@@ -1,7 +1,9 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.body-wrapper {
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Максимальная ширина */
+    width: 100%;
+    background-color: #f5f5f5;
 }
 
 #hero {
